@@ -27,7 +27,9 @@
         "lint:unit": "phpstan analyse test-unit --level 5"
     },
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "php": ">=7.4"
+    },
     "config": {
         "allow-plugins": {
             "phpstan/extension-installer": true
