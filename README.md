@@ -1,7 +1,10 @@
 <h1>mnemesong/scalarex</h1>
 
+[![Latest Stable Version](http://poser.pugx.org/mnemesong/scalarex/v)](https://packagist.org/packages/mnemesong/scalarex)
 [![PHPUnit](https://github.com/mnemesong/scalarex/actions/workflows/phpunit.yml/badge.svg)](https://github.com/mnemesong/scalarex/actions/workflows/phpunit.yml)
 [![PHPStan-lvl9](https://github.com/mnemesong/scalarex/actions/workflows/phpstan.yml/badge.svg)](https://github.com/mnemesong/scalarex/actions/workflows/phpstan.yml)
+[![PHP Version Require](http://poser.pugx.org/mnemesong/scalarex/require/php)](https://packagist.org/packages/mnemesong/scalarex)
+[![License](http://poser.pugx.org/mnemesong/scalarex/license)](https://packagist.org/packages/mnemesong/scalarex)
 
 - The documentation is written in two languages: Russian and English.
 - Документация написана на двух языках: русском и английском.
