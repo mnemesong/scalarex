@@ -13,15 +13,17 @@ final class ScalarSpecification
     const T_SUM = 'sum';
 
     protected string $type;
-    protected ?string $field = null;
+    protected ?string $field;
 
     /**
      * @param string $type
+     * @param string|null $field
      */
-    public function __construct(string $type)
+    public function __construct(string $type, ?string $field = null)
     {
         Assert::inArray($type, self::getTypes());
         $this->type = $type;
+        $this->setField($field);
     }
 
     /**
@@ -30,9 +32,8 @@ final class ScalarSpecification
      */
     public function withField(string $field): self
     {
-        Assert::notEmpty($field, 'Field name should be not empty string');
         $clone = clone $this;
-        $clone->field = $field;
+        $clone->setField($field);
         return $clone;
     }
 
@@ -64,5 +65,13 @@ final class ScalarSpecification
             self::T_MIN,
             self::T_SUM
         ];
+    }
+
+    protected function setField(?string $field): void
+    {
+        if(isset($field)) {
+            Assert::stringNotEmpty($field);
+        }
+        $this->field = $field;
     }
 }
