@@ -1,0 +1,36 @@
+{
+    "name": "mnemesong/scalarex",
+    "description": "Scalar specifications expressor",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpstan/phpstan": "*",
+        "phpstan/phpstan-webmozart-assert": "*",
+        "phpstan/extension-installer": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mnemesong\\Scalarex\\": "src/",
+            "Mnemesong\\ScalarexTestUnit\\": "test-unit/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pantagruel74",
+            "email": "tostar74@mail.ru"
+        }
+    ],
+    "scripts": {
+        "test:unit": "phpunit test-unit",
+        "lint:src": "phpstan analyse src --level 9",
+        "lint:unit": "phpstan analyse test-unit --level 5"
+    },
+    "minimum-stability": "stable",
+    "require": {},
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
