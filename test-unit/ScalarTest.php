@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class ScalarTest extends TestCase
 {
-    public function testAvg()
+    public function testAvg(): void
     {
         $spec = Scalar::avg();
         $this->assertEquals(new ScalarSpecification('avg', null), $spec);
@@ -17,7 +17,7 @@ class ScalarTest extends TestCase
         $this->assertEquals(new ScalarSpecification('avg', 'age'), $spec);
     }
 
-    public function testCount()
+    public function testCount(): void
     {
         $spec = Scalar::count();
         $this->assertEquals(new ScalarSpecification('count', null), $spec);
@@ -26,7 +26,7 @@ class ScalarTest extends TestCase
         $this->assertEquals(new ScalarSpecification('count', 'age'), $spec);
     }
 
-    public function testSum()
+    public function testSum(): void
     {
         $spec = Scalar::sum();
         $this->assertEquals(new ScalarSpecification('sum', null), $spec);
@@ -35,7 +35,7 @@ class ScalarTest extends TestCase
         $this->assertEquals(new ScalarSpecification('sum', 'age'), $spec);
     }
 
-    public function testMin()
+    public function testMin(): void
     {
         $spec = Scalar::min();
         $this->assertEquals(new ScalarSpecification('min', null), $spec);
@@ -44,7 +44,7 @@ class ScalarTest extends TestCase
         $this->assertEquals(new ScalarSpecification('min', 'age'), $spec);
     }
 
-    public function testMax()
+    public function testMax(): void
     {
         $spec = Scalar::max();
         $this->assertEquals(new ScalarSpecification('max', null), $spec);
