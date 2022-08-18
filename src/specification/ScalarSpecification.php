@@ -14,6 +14,7 @@ final class ScalarSpecification
 
     protected string $type;
     protected ?string $field;
+    protected string $name = '';
 
     /**
      * @param string $type
@@ -35,6 +36,25 @@ final class ScalarSpecification
         $clone = clone $this;
         $clone->setField($field);
         return $clone;
+    }
+
+    /**
+     * @param string $name
+     * @return $this
+     */
+    public function withName(string $name): self
+    {
+        $clone = clone $this;
+        $clone->name = $name;
+        return $clone;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     /**
