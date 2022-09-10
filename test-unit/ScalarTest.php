@@ -8,6 +8,9 @@ use PHPUnit\Framework\TestCase;
 
 class ScalarTest extends TestCase
 {
+    /**
+     * @return void
+     */
     public function testAvg(): void
     {
         $spec = Scalar::avg();
@@ -17,6 +20,9 @@ class ScalarTest extends TestCase
         $this->assertEquals(new ScalarSpecification('avg', 'age'), $spec);
     }
 
+    /**
+     * @return void
+     */
     public function testCount(): void
     {
         $spec = Scalar::count();
@@ -26,6 +32,9 @@ class ScalarTest extends TestCase
         $this->assertEquals(new ScalarSpecification('count', 'age'), $spec);
     }
 
+    /**
+     * @return void
+     */
     public function testSum(): void
     {
         $spec = Scalar::sum();
@@ -35,6 +44,9 @@ class ScalarTest extends TestCase
         $this->assertEquals(new ScalarSpecification('sum', 'age'), $spec);
     }
 
+    /**
+     * @return void
+     */
     public function testMin(): void
     {
         $spec = Scalar::min();
@@ -44,6 +56,9 @@ class ScalarTest extends TestCase
         $this->assertEquals(new ScalarSpecification('min', 'age'), $spec);
     }
 
+    /**
+     * @return void
+     */
     public function testMax(): void
     {
         $spec = Scalar::max();
@@ -51,5 +66,29 @@ class ScalarTest extends TestCase
 
         $spec = Scalar::max('age');
         $this->assertEquals(new ScalarSpecification('max', 'age'), $spec);
+    }
+
+    /**
+     * @return void
+     */
+    public function testLong(): void
+    {
+        $spec = Scalar::long();
+        $this->assertEquals(new ScalarSpecification('long', null), $spec);
+
+        $spec = Scalar::long('age');
+        $this->assertEquals(new ScalarSpecification('long', 'age'), $spec);
+    }
+
+    /**
+     * @return void
+     */
+    public function testShort(): void
+    {
+        $spec = Scalar::short();
+        $this->assertEquals(new ScalarSpecification('short', null), $spec);
+
+        $spec = Scalar::short('age');
+        $this->assertEquals(new ScalarSpecification('short', 'age'), $spec);
     }
 }

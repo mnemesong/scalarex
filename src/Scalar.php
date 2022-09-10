@@ -50,4 +50,22 @@ class Scalar
     {
         return new ScalarSpecification(ScalarSpecification::T_SUM, $field);
     }
+
+    /**
+     * @param string|null $field
+     * @return ScalarSpecification
+     */
+    public static function long(?string $field = null): ScalarSpecification
+    {
+        return new ScalarSpecification(ScalarSpecification::T_LONG, $field);
+    }
+
+    /**
+     * @param string|null $field
+     * @return ScalarSpecification
+     */
+    public static function short(?string $field = null): ScalarSpecification
+    {
+        return new ScalarSpecification(ScalarSpecification::T_SHORT, $field);
+    }
 }
