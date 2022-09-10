@@ -26,7 +26,7 @@ class ScalarSpecificationTest extends TestCase
 
     public function testTypes(): void
     {
-        $typesList = ['avg', 'count', 'max', 'min', 'sum',];
+        $typesList = ['avg', 'count', 'max', 'min', 'sum', 'long', 'short'];
         $this->assertEquals([], array_diff($typesList, ScalarSpecification::getTypes()));
         $this->assertEquals([], array_diff(ScalarSpecification::getTypes(), $typesList));
     }

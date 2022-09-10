@@ -10,6 +10,8 @@ final class ScalarSpecification
     const T_COUNT = 'count';
     const T_MAX = 'max';
     const T_MIN = 'min';
+    const T_LONG = 'long';
+    const T_SHORT = 'short';
     const T_SUM = 'sum';
 
     protected string $type;
@@ -83,7 +85,9 @@ final class ScalarSpecification
             self::T_COUNT,
             self::T_MAX,
             self::T_MIN,
-            self::T_SUM
+            self::T_SUM,
+            self::T_LONG,
+            self::T_SHORT,
         ];
     }
 
